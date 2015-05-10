@@ -1,0 +1,38 @@
+FUERZA BRUTA
+
+Enunciado 1
+
+En un laboratorio se están realizando pruebas experimentales con un grupo de
+ratones. El experimento consiste en colocar a los roedores en distintos laberintos y ver si
+estos son capaces de encontrar la salida.
+Los expertos encargados requieren que usted diseñe un sistema que muestre el
+camino que deberían seguir los ratones para salir de los diferentes laberintos que se generan
+para las pruebas.
+
+Entrada
+La entrada consta de un archivo de nombre “entrada.in” que contiene una matriz
+cuya simbología representa un laberinto. La posición inicial en el experimento se representa
+con un número 2, mientras que la salida estará marcada con un 3. Los muros del laberinto
+estarán definidos por el cero y los caminos por los cuales puede avanzar el ratón con el uno.
+
+Salida
+Se debe generar un archivo de nombre “salida.out” donde se escriba una matriz del
+mismo tamaño que la contenida en la entrada, la cual mostrará el camino que debe seguir el
+ratón para salir del laberinto. Este camino debe ser representado con unos, mientras que el
+resto de la matriz debe ser llenada con ceros. En caso que el laberinto ingresado no tenga
+solución, se debe escribir en la salida “No tiene solución!”.
+
+Ejemplo de entrada
+2 1 1 1 0
+0 0 0 1 0
+0 1 1 1 1
+0 1 0 1 0
+0 3 0 1 1
+
+Ejemplo de salida
+1 1 1 1 0
+0 0 0 1 0
+0 1 1 1 0
+0 1 0 0 0
+0 1 0 0 0
+

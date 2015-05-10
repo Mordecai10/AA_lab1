@@ -1,8 +1,8 @@
-int combinacion(int MAX_ELEMENTOS,int ELEM_X_COMBI);
-void imprimirCombinacion(unsigned char *ucVector, unsigned char ucElementos);
+int combinacion(int numeroElemento,int numeroR);
 typedef unsigned char Boolean;
-unsigned char incrementarCombinacion(unsigned char *ucVector,
-                                     unsigned char ucActual,
-                                     unsigned char ucElementos,
-                                     unsigned char ucElemCombi,
-                                     Boolean ucSalir);
+void imprimirCombinacion(unsigned char *conjuntoInicial, unsigned char cantidadElementos);
+unsigned char incrementarCombinacion(unsigned char *conjuntoInicial,
+                                     unsigned char posicionActual,
+                                     unsigned char cantidadElementos,
+                                     unsigned char conjuntoR,
+                                     Boolean salir);

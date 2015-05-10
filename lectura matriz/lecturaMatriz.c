@@ -68,7 +68,6 @@ int main(int argc, char const *argv[]){
 	}
 
 	printf("la cantidad de filas es: %d\n",filas);
-	printf("%d\n",largo );
 //###########################################
 	lista=lista->siguiente;
 	struct Nodo *lector;
@@ -79,13 +78,13 @@ int main(int argc, char const *argv[]){
 	}
 
 	struct Nodo *encontrador;
-	int encontrar=22;
+	int encontrar=2;
 		encontrador=lista;
 		while(encontrar>1){
 			encontrador=encontrador->siguiente;
 			encontrar--;
 		}
-	printf("Nodo %i, tine los siguientes elementos: %c,coordenadas (%i,%i)\n",encontrar+1,encontrador->dato,encontrador->columna,encontrador->fila);	
+	printf("Nodo %i, encontrado tine los siguientes elementos: %c,coordenadas (%i,%i)\n",encontrar+1,encontrador->dato,encontrador->columna,encontrador->fila);	
 //###########################################
 	return 0;
 }

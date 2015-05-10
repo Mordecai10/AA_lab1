@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "combinacion.h"
-#define NUMELEMENTOS 25
+#define NUMELEMENTOS 4
 int main(int argc, char const *argv[])
 {
 	FILE * combinaciones;

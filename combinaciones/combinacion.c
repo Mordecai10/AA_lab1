@@ -24,7 +24,10 @@ int combinacion(int numeroElementos,int numeroR)
   unsigned char conjuntoR;                            /* Elementos por combinación     */
   Boolean salir;                                      /* Indica si se sale del bucle   */
 
+
   /* Inicialización de variables                                              */
+  FILE *combinaciones;
+  combinaciones=fopen("combinaciones.txt","a+");
   cantidadElementos = numeroElementos;
   conjuntoR = numeroR;
   salir = FALSE;
@@ -37,6 +40,11 @@ int combinacion(int numeroElementos,int numeroR)
 
   /* Impresión de los elementos iniciales del vector                          */
   imprimirCombinacion(conjuntoInicial, conjuntoR);
+  for (aux = 0; aux < conjuntoR; ++aux)
+      {
+        fprintf(combinaciones, "%i ",conjuntoInicial[aux]+1 );
+      }
+      fprintf(combinaciones, "%s","\n" );
 
   /* Se repite mientras no se indique que se debe salir del bucle             */
   while(salir == FALSE)
@@ -56,11 +64,16 @@ int combinacion(int numeroElementos,int numeroR)
     /* En caso contrario se muestra la combinación actual por pantalla        */
     else
     {
+      for (aux = 0; aux < conjuntoR; ++aux)
+      {
+        fprintf(combinaciones, "%i ",conjuntoInicial[aux]+1 );
+      }
+      fprintf(combinaciones, "%s","\n" );
       imprimirCombinacion(conjuntoInicial, conjuntoR);
       salir = FALSE;
     }
   }
-
+  fclose(combinaciones);
   return 0;
 }
 
@@ -129,5 +142,3 @@ unsigned char incrementarCombinacion(unsigned char *conjuntoInicial,
 
   return salir;
 }
-
-.
